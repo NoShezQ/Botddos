@@ -1,8 +1,7 @@
 {
-    "name": "fingerprint-generator",
+    "name": "fingerprint-injector",
     "version": "2.1.6",
-    "description": "NodeJS package for generating realistic browser fingerprints.",
-    "homepage": "https://github.com/apify/fingerprint-suite",
+    "description": "Browser fingerprint injection library for Playwright and Puppeteer.",
     "engines": {
         "node": ">=16.0.0"
     },
@@ -16,26 +15,38 @@
             "types": "./index.d.ts"
         }
     },
+    "dependencies": {
+        "fingerprint-generator": "^2.1.6",
+        "tslib": "^2.4.0"
+    },
+    "peerDependencies": {
+        "playwright": "^1.22.2",
+        "puppeteer": ">= 9.x"
+    },
+    "peerDependenciesMeta": {
+        "playwright": {
+            "optional": true
+        },
+        "puppeteer": {
+            "optional": true
+        }
+    },
     "scripts": {
         "build": "npm run clean && npm run compile",
-        "postbuild": "cp -r src/data_files  && cp ../../README.md ",
+        "postbuild": "cp ../../README.md ",
         "clean": "rimraf ./dist",
         "compile": "tsc -p tsconfig.build.json && gen-esm-wrapper ./index.js ./index.mjs",
         "copy": "ts-node -T ../../scripts/copy.ts"
     },
+    "author": {
+        "name": "Apify",
+        "email": "support@apify.com",
+        "url": "https://apify.com"
+    },
+    "license": "Apache-2.0",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/apify/fingerprint-suite.git"
-    },
-    "author": "Apify",
-    "license": "Apache-2.0",
-    "bugs": {
-        "url": "https://github.com/apify/fingerprint-suite/issues"
-    },
-    "dependencies": {
-        "generative-bayesian-network": "^2.1.6",
-        "header-generator": "^2.1.6",
-        "tslib": "^2.4.0"
+        "url": "git+https://github.com/apify/fingerprint-suite"
     },
     "gitHead": "64873402d07d46fcb57ae388be2e5f79503b55b5"
 }

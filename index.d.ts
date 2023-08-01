@@ -1,3 +1,2 @@
-export * from './fingerprint-generator';
-export { PRESETS, HeaderGeneratorOptions, Headers } from 'header-generator';
+export * from './fingerprint-injector';
 //# sourceMappingURL=index.d.ts.map

@@ -1,3 +1,2 @@
-export declare const STRINGIFIED_PREFIX: "*STRINGIFIED*";
-export declare const MISSING_VALUE_DATASET_TOKEN: "*MISSING_VALUE*";
+export declare const UTILS_FILE_NAME = "utils.js";
 //# sourceMappingURL=constants.d.ts.map
